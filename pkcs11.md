@@ -1,14 +1,18 @@
-
-
-
-# Standards for cryptographic key management:
-
-- IEEE 1619.3 
-- OASIS 
-
 # PKCS#11
 
-Steps to use crypto hardware tokens with pkcs11 interface specification:
+*According to [Wikipedia](https://en.wikipedia.org/wiki/PKCS_11):*
+
+> The PKCS #11 standard defines a platform-independent API to cryptographic tokens, such as hardware security modules (HSM) and smart cards, and names the API itself "Cryptoki" (from "cryptographic token interface" and pronounced as "crypto-key" - but "PKCS #11" is often used to refer to the API as well as the standard that defines it).
+>
+>The API defines most commonly used cryptographic object types (RSA keys, X.509 Certificates, DES/Triple DES keys, etc.) and all the functions needed to use, create/generate, modify and delete those objects.
+
+PKCS#11 cryptographic token interface base specification is maintained by [OASIS](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html).
+
+For an overview of PKCS#11 specification, please check [this](https://www.dnssec.cz/files/nic/doc/hsm.pdf). We suggest to read this document before going thorugh the specification as it is easy to understand.  
+
+## Usage of PKCS#11
+
+Steps to use crypto hardware tokens with pkcs11 interface specification are:
 
 1. Open a session with the target token, which returns a session handler.
 1. Log into the token using PIN
@@ -33,7 +37,16 @@ the extractable attribute cannot be set to true.
 
 ## Attacsk on PKCS#11
 
-# Useful Resource
+TODO 
+
+## Experice PKCS#11
+
+We have added two addition totorials for this purpose, please the read those:
+
+- [SoftHSM](softhsm.md) (simulated HSM token for exploring PKCS#11 API)
+- [python-pkcs11](python-pkcs11.md) (high-level pythonic API using base PKCS#11 API)
+
+## Useful Resource
 
 - A dive into SoftHSM. [Link](https://medium.com/@clydecroix/a-dive-into-softhsm-e4be3e70c7bc)
 - SoftHSM Documentation v2 [Link](https://wiki.opendnssec.org/display/SoftHSMDOCS/SoftHSM+Documentation+v2)

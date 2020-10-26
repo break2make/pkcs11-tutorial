@@ -1,6 +1,10 @@
 
 # SoftHSM
 
+*According of SoftHSM official [website](https://www.opendnssec.org/softhsm/):*
+
+>SoftHSM is an implementation of a cryptographic store accessible through a PKCS #11 interface. You can use it to explore PKCS #11 without having a Hardware Security Module. It is being developed as a part of the OpenDNSSEC project. SoftHSM uses Botan for its cryptographic operations.
+
 ## Installation
 
 SoftHSM can be installed using binarary package or from [source](https://github.com/opendnssec/SoftHSMv2). We use the following command to installed SoftHSM2 (version 2) in Ubuntu 18.04:
